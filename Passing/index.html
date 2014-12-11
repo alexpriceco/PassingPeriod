@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Passing</title>
+
+    <!-- Passing references -->
+    <link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+    <div class="container-nav">
+        <ul class="nav">
+            <li><a id="nav-classes" class="current" href="javascript:showClasses();"><h5>Classes</h5></a></li>
+            <li><a id="nav-long-term" href="javascript:showLongTerm();"><h5>Long Term</h5></a></li>
+            <li><a id="nav-settings" href="javascript:showSettings();"><h5>Settings</h5></a></li>
+            <!--<li ><canvas id="canv" width="40" height="44"></canvas></li>-->
+        </ul> <!--TODO: Change the canvas business to a really rounded DIV-->
+    </div>
+    </header>
+    <div class="container-content" id="classes">
+        <p>This is for Assignments for individual classes.</p>
+        <p>It's gonna be really <b>great.</b></p>
+        <div class="container-class">
+            <a href="javascript:showClass(1);">
+                <h3>Class 1</h3>
+            </a>
+            <div id="class-1" class="container-class-list" style="max-height: 0;"></div>
+        </div>
+        <div class="container-class">
+            <a href="javascript:showClass(2);">
+                <h3>Class 2</h3>
+            </a>
+            <div id="class-2" class="container-class-list" style="max-height: 0;"></div>
+        </div>
+        <div class="container-class">
+            <a href="javascript:showClass(3);">
+                <h3>Class 3</h3>
+            </a>
+            <div id="class-3" class="container-class-list" style="max-height: 0;"></div>
+        </div>
+        <div class="container-class">
+            <a href="javascript:showClass(4);">
+                <h3>Class 4</h3>
+            </a>
+            <div id="class-4" class="container-class-list" style="max-height: 0;"></div>
+        </div>
+        <div class="container-class" >
+            <a href="javascript:showClass(5);">
+                <h3>Class 5</h3>
+            </a>
+            <div id="class-5" class="container-class-list" style="max-height: 0;"></div>
+        </div>
+        <div class="container-class">
+            <a href="javascript:showClass(6);">
+                <h3>Class 6</h3>
+            </a>
+            <div id="class-6" class="container-class-list" style="max-height: 0;"></div>
+        </div>
+        <div class="container-class">
+            <a href="javascript:showClass(7);">
+                <h3>Class 7</h3>
+            </a>
+            <div id="class-7" class="container-class-list" style="max-height: 0;"></div>
+        </div>
+        <div class="container-class">
+            <a href="javascript:showClass(8);">
+                <h3>Class 8</h3>
+            </a>
+            <div id="class-8" class="container-class-list" style="max-height: 0;"></div>
+        </div>
+    </div>
+
+    <div class="container-content" id="longTerm" style="display:none">
+        <p>This is for long term Assignments.</p>
+        <p>It's gonna be really <b>great.</b></p>
+        <br />
+    </div>
+
+    <div class="container-content" id="settings" style="display:none">
+        <p>Settings!</p>
+        <p>It's gonna be really <b>great.</b></p>
+        <br />
+    </div>
+
+
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+
+    <script src="scripts/index.js"></script>
+</body>
+</html>
