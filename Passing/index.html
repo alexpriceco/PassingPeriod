@@ -1,75 +1,89 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <title>Passing</title>
 
     <!-- Passing references -->
-    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/index copy.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#accordion section h1").click(function(e) {
+                $(this).parents().siblings("section").addClass("ac_hidden");
+                $(this).parents("section").removeClass("ac_hidden");
+                e.preventDefault();
+            });
+        }); 
+    </script>
 </head>
 <body>
     <header>
-    <div class="container-nav">
-        <ul class="nav">
-            <li><a id="nav-classes" class="current" href="javascript:showClasses();"><h5>Classes</h5></a></li>
-            <li><a id="nav-long-term" href="javascript:showLongTerm();"><h5>Long Term</h5></a></li>
-            <li><a id="nav-settings" href="javascript:showSettings();"><h5>Settings</h5></a></li>
-            <!--<li ><canvas id="canv" width="40" height="44"></canvas></li>-->
-        </ul> <!--TODO: Change the canvas business to a really rounded DIV-->
+    <div class="navbar">
+            <a id="nav-classes" class="current" href="javascript:showClasses();">
+                <div class="nav-item"><h5>Classes</h5></div>
+            </a>
+            <a id="nav-long-term" href="javascript:showLongTerm();">
+                <div class="nav-item"><h5>Long Term</h5></div>
+            </a>
+            <a id="nav-settings" href="javascript:showSettings();">
+                <div class="nav-item"><h5>Settings</h5></div>
+            </a>
     </div>
     </header>
-    <div class="container-content" id="classes">
-        <p>This is for Assignments for individual classes.</p>
-        <p>It's gonna be really <b>great.</b></p>
-        <div class="container-class">
-            <a href="javascript:showClass(1);">
-                <h3>Class 1</h3>
-            </a>
-            <div id="class-1" class="container-class-list" style="max-height: 0;"></div>
+    
+    <br><br><br><br><br>
+    
+    <article>
+        <section class="container-content" id="classes">
+            <span>Hey Student! You'll find all of your classes under this tab, with assignments underneath them.</span>
+            <br><br>
+        
+        <div id="accordion">
+          <section id="item1">
+            <p class="pointer"></p><h1><a href="#">Due tomorrow</a></h1>
+            <p>There's nothing due tomorrow! Spend some time getting ahead on future assignments!</p>
+          </section>
+          <section id="item2" class="ac_hidden">
+            <p class="pointer"></p><h1><a href="#">Class 1</a></h1>
+            <p>Pellentesque habitant... </p>
+          </section>
+          <section id="item3" class="ac_hidden">
+            <p class="pointer"></p><h1><a href="#">Class 2</a></h1>
+            <p>Pellentesque habitant... </p>
+            <p>Pellentesque habitant... </p>
+          </section>
+          <section id="item4" class="ac_hidden">
+            <p class="pointer"></p><h1><a href="#">Class 3</a></h1>
+            <p>Pellentesque habitant... </p>
+          </section>
+          <section id="item5" class="ac_hidden">
+            <p class="pointer"></p><h1><a href="#">Class 4</a></h1>
+            <p>Pellentesque habitant... </p>
+          </section>
+          <section id="item6" class="ac_hidden">
+            <p class="pointer"></p><h1><a href="#">Class 5</a></h1>
+            <p>Pellentesque habitant... </p>
+            <p>Pellentesque habitant... </p>
+          </section>
+          <section id="item7" class="ac_hidden">
+            <p class="pointer"></p><h1><a href="#">Class 6</a></h1>
+            <p>Pellentesque habitant... </p>
+            <p>Pellentesque habitant... </p>
+          </section>
+          <section id="item8" class="ac_hidden">
+            <p class="pointer"></p><h1><a href="#">Class 7</a></h1>
+            <p>Pellentesque habitant... </p>
+            <p>Pellentesque habitant... </p>
+          </section>
+          <section id="item8" class="ac_hidden">
+            <p class="pointer"></p><h1><a href="#">Class 8</a></h1>
+            <p>Pellentesque habitant... </p>
+            <p>Pellentesque habitant... </p>
+          </section>
         </div>
-        <div class="container-class">
-            <a href="javascript:showClass(2);">
-                <h3>Class 2</h3>
-            </a>
-            <div id="class-2" class="container-class-list" style="max-height: 0;"></div>
-        </div>
-        <div class="container-class">
-            <a href="javascript:showClass(3);">
-                <h3>Class 3</h3>
-            </a>
-            <div id="class-3" class="container-class-list" style="max-height: 0;"></div>
-        </div>
-        <div class="container-class">
-            <a href="javascript:showClass(4);">
-                <h3>Class 4</h3>
-            </a>
-            <div id="class-4" class="container-class-list" style="max-height: 0;"></div>
-        </div>
-        <div class="container-class" >
-            <a href="javascript:showClass(5);">
-                <h3>Class 5</h3>
-            </a>
-            <div id="class-5" class="container-class-list" style="max-height: 0;"></div>
-        </div>
-        <div class="container-class">
-            <a href="javascript:showClass(6);">
-                <h3>Class 6</h3>
-            </a>
-            <div id="class-6" class="container-class-list" style="max-height: 0;"></div>
-        </div>
-        <div class="container-class">
-            <a href="javascript:showClass(7);">
-                <h3>Class 7</h3>
-            </a>
-            <div id="class-7" class="container-class-list" style="max-height: 0;"></div>
-        </div>
-        <div class="container-class">
-            <a href="javascript:showClass(8);">
-                <h3>Class 8</h3>
-            </a>
-            <div id="class-8" class="container-class-list" style="max-height: 0;"></div>
-        </div>
-    </div>
+        </section>
+    
 
     <div class="container-content" id="longTerm" style="display:none">
         <p>This is for long term Assignments.</p>
@@ -82,7 +96,7 @@
         <p>It's gonna be really <b>great.</b></p>
         <br />
     </div>
-
+</article>
 
     <!-- Cordova reference, this is added to your app when it's built. -->
     <script src="cordova.js"></script>
